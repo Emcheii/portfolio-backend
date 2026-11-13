@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+/* ================================
+   DESIGN TOKENS
+================================ */
+
+:root {
+  /* Backgrounds */
+  --color-background: #10131b;
+  --color-surface: #1c1f29;
+  --color-surface-alt: #191c25;
+  --color-terminal: #0c1018;
+
+  /* Borders */
+  --color-border: #252a36;
+  --color-border-muted: #202530;
+
+  /* Text */
+  --color-text: #d7d9e5;
+  --color-text-muted: #a6b0a8;
+  --color-text-subtle: #858f87;
+
+  /* Accent */
+  --color-accent: #19c995;
+  --color-accent-light: #48dda9;
+  --color-accent-dark: #087f62;
+
+  /* Typography */
+  --font-mono: 'IBM Plex Mono', monospace;
+  --font-serif: 'DM Serif Display', serif;
+}
+
+/* ================================
+   LIGHT THEME
+================================ */
+
+[data-theme="light"] {
+  --color-background: #f4f5f2;
+  --color-surface: #ffffff;
+  --color-surface-alt: #eef0ed;
+  --color-terminal: #e9ece9;
+
+  --color-border: #dce1dc;
+  --color-border-muted: #e5e8e4;
+
+  --color-text: #20272b;
+  --color-text-muted: #59655f;
+  --color-text-subtle: #7b8780;
+
+  --color-accent: #078b68;
+  --color-accent-light: #13a77c;
+  --color-accent-dark: #066e53;
+}
+
+/* ================================
+   GLOBAL STYLES
+================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.6;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: #10131b;
+}
